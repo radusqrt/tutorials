@@ -1,13 +1,21 @@
+Cassandra specifications
+------------------------
+
 Cassandra is:
-    - a *distributed* database from Apache
-    - highly *scalable*
-    - designed to manage *very large* amounts of *structured* data
-    - high *availability*
-    - NoSqlDatabase (Not Only SQL)
-        - schema-free
-        - easy replication
-        - simple API
-        - eventually consistent
+- a **distributed** database from Apache
+- **descentralized**
+- highly **scalable** (add hardware for more customers)
+- designed to manage **very large** amounts of *structured* data
+- high **availability**
+- column orientted
+- open source
+- NoSqlDatabase (Not Only SQL)
+    - schema-free
+    - easy replication
+    - simple API
+    - eventually consistent
+- Cassandra supports **ACID**
+- developed at Facebook
 
 | Relational Database               | NoSql Database                      |
 | --------------------------------- | ----------------------------------- |
@@ -16,4 +24,4 @@ Cassandra is:
 | follows ACID                      | it is only "eventually consistent"  |
 | supports transactions             | does not support transactions       |
 
-ACID = Atomicity, Consistency, Isolation, Durability
+**ACID** = Atomicity, Consistency, Isolation, Durability
