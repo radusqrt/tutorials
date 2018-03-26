@@ -61,3 +61,47 @@ USE <identifier>
 ```sql
 USE tutorialspoint;
 ```
+
+## Altering and deleting a Keyspace
+
+```sql
+DROP KEYSPACE <identifier>
+```
+
+```sql
+ALTER KEYSPACE <identifier> WITH <properties>
+```
+
+## Creating a table
+
+```sql
+CREATE (TABLE | COLUMNFAMILY) <tablename>
+('<column-definition>', '<column-definition>')
+(WITH <option> AND <option>)
+```
+
+```sql
+CREATE TABLE emp(
+   emp_id int PRIMARY KEY,
+   emp_name text,
+   emp_city text,
+   emp_sal varint,
+   emp_phone varint
+   );
+```
+
+## Batch instructions
+
+```sql
+BEGIN BATCH
+<insert-stmt>/ <update-stmt>/ <delete-stmt>
+APPLY BATCH
+```
+
+```sql
+BEGIN BATCH
+INSERT INTO emp (emp_id, emp_city, emp_name, emp_phone, emp_sal) values(  4,'Pune','rajeev',9848022331, 30000);
+UPDATE emp SET emp_sal = 50000 WHERE emp_id =3;
+DELETE emp_city FROM emp WHERE emp_id = 2;
+APPLY BATCH;
+```
