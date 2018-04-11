@@ -9,3 +9,10 @@ constness
 - When **const** and **non-const** member functions have essentially identical
 implementations, code duplication can be avoided by having the non-const version
 call the const version
+- Manually initialize objects of built-in type, because C++ only **sometimes**
+initializes them itself
+- In a constructor, prefer to use member initialization list to assignment inside
+the body of the constructor. List data in the initialization list in the **same order**
+they're declared in the class.
+- Avoid initialization order problems across translation units by replacing
+non-local static objects with local static objects.
